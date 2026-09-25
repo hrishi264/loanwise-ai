@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Prediction Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="page">
+    <div class="card center">
+
+        <h1 class="title">Prediction Result</h1>
+
+        <p class="result-text">
+            {{ prediction }}
+        </p>
+
+        <div class="model-info">
+            <p>
+                This prediction is generated using a
+                <b>Random Forest Classifier</b> trained on a public loan dataset.
+            </p>
+            <p>
+                The model achieves an accuracy of approximately <b>83%</b>
+                on historical data.
+            </p>
+        </div>
+
+        <a href="{{ url_for('home') }}" class="btn secondary">Back to Home</a>
+
+    </div>
+</div>
+
+</body>
+</html>
